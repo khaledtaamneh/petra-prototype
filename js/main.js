@@ -185,16 +185,9 @@
     return (
       '<a class="interest-card" href="' +
       item.url +
-      '" rel="noopener noreferrer">' +
-      '<span class="interest-card__icon">' +
-      iconSvg(item.icon) +
-      "</span>" +
-      " <h3>" +
+      '" rel="noopener noreferrer"><h3>' +
       item.title +
       "</h3>" +
-      '<span class="interest-card__meta">' +
-      item.countLabel +
-      "</span>" +
       '<span class="interest-card__arrow" aria-hidden="true">→</span></a>'
     );
   }
