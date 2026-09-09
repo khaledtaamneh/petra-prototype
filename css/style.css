@@ -133,14 +133,9 @@ input {
   display: block;
 }
 
-.site-header .brand__logo {
-  filter: invert(1);
-}
-
 .site-footer .brand__logo {
   height: 56px;
   max-width: 280px;
-  mix-blend-mode: screen;
 }
 
 .nav-toggle {
@@ -218,6 +213,29 @@ input {
 
 .nav-apply {
   display: none;
+}
+
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-weight: 800;
+  font-size: 0.78rem;
+  flex-shrink: 0;
+}
+
+.lang-switch a {
+  text-decoration: none;
+  color: #6b6b6b;
+  padding: 0.2rem 0.15rem;
+}
+
+.lang-switch a[aria-current="true"] {
+  color: var(--maroon);
+}
+
+.lang-switch span {
+  color: #c5c5c5;
 }
 
 .header-actions {
@@ -352,6 +370,13 @@ input {
   max-width: 640px;
 }
 
+@media (min-width: 1025px) {
+  .hero__content {
+    margin-inline-start: max(1rem, calc((100% - var(--container)) / 2));
+    margin-inline-end: auto;
+  }
+}
+
 .hero__kicker {
   letter-spacing: 0.18em;
   font-size: 0.78rem;
@@ -443,7 +468,7 @@ input {
 
 .interest-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
 }
 
@@ -451,7 +476,8 @@ input {
   background: #fff;
   border: 1px solid #ececec;
   border-radius: 12px;
-  padding: 1.55rem 2.4rem 1.55rem 1.35rem;
+  padding-block: 1.55rem;
+  padding-inline: 1.35rem 2.4rem;
   min-height: 132px;
   text-decoration: none;
   display: flex;
@@ -1094,6 +1120,10 @@ body.nav-open {
     display: none;
   }
 
+  .lang-switch {
+    font-size: 0.72rem;
+  }
+
   .nav-apply {
     display: block;
     padding-top: 1rem;
@@ -1137,6 +1167,62 @@ body.nav-open {
   }
 
   .primary-nav .nav-apply a.btn--primary {
+    color: #fff;
+    border-bottom: 0;
+    padding: 0.75rem 1.15rem;
+    font-size: 0.95rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 1280px) {
+  html[dir="rtl"] .nav-toggle {
+    display: grid;
+    place-items: center;
+  }
+
+  html[dir="rtl"] .header-actions .btn {
+    display: none;
+  }
+
+  html[dir="rtl"] .nav-apply {
+    display: block;
+    padding-top: 1rem;
+  }
+
+  html[dir="rtl"] .nav-apply .btn {
+    width: 100%;
+  }
+
+  html[dir="rtl"] .primary-nav {
+    position: fixed;
+    inset: var(--header-h) 0 0 0;
+    background: #fff;
+    transform: translateX(-100%);
+    transition: transform 0.2s ease;
+    padding: 1.2rem;
+    overflow: auto;
+    flex: none;
+  }
+
+  html[dir="rtl"] .primary-nav.is-open {
+    transform: none;
+  }
+
+  html[dir="rtl"] .primary-nav ul {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  html[dir="rtl"] .primary-nav a {
+    display: block;
+    padding: 0.9rem 0.2rem;
+    font-size: 1.15rem;
+    border-bottom: 1px solid var(--line);
+  }
+
+  html[dir="rtl"] .primary-nav .nav-apply a.btn--primary {
     color: #fff;
     border-bottom: 0;
     padding: 0.75rem 1.15rem;
@@ -1255,6 +1341,67 @@ body.nav-open {
   .primary-nav {
     transition: none;
   }
+}
+
+html[dir="rtl"] {
+  --font: "Cairo", "Segoe UI", Tahoma, sans-serif;
+  --serif: "Amiri", "Noto Naskh Arabic", Georgia, serif;
+  --script: "Aref Ruqaa", "Amiri", serif;
+}
+
+html[dir="rtl"] body {
+  line-height: 1.75;
+}
+
+html[dir="rtl"] .eyebrow,
+html[dir="rtl"] .hero__kicker {
+  letter-spacing: 0;
+  text-transform: none;
+  font-weight: 700;
+}
+
+html[dir="rtl"] .hero h1 {
+  line-height: 1.18;
+}
+
+html[dir="rtl"] .section-head h2,
+html[dir="rtl"] .page-hero h1,
+html[dir="rtl"] .faculty-panel h2,
+html[dir="rtl"] .specific h2,
+html[dir="rtl"] .journey h2,
+html[dir="rtl"] .cta h2,
+html[dir="rtl"] .campus-feature h2 {
+  line-height: 1.28;
+}
+
+html[dir="rtl"] .hero::after {
+  background:
+    linear-gradient(180deg, rgba(10, 8, 8, 0.08) 0%, rgba(10, 8, 8, 0.55) 55%, rgba(10, 8, 8, 0.78) 100%),
+    linear-gradient(270deg, rgba(10, 8, 8, 0.45) 0%, rgba(10, 8, 8, 0.08) 55%);
+}
+
+html[dir="rtl"] .hero__script {
+  transform: rotate(8deg);
+}
+
+html[dir="rtl"] .footer-motto p {
+  max-width: 12ch;
+}
+
+html[dir="rtl"] .primary-nav,
+html[dir="rtl"] .life-list,
+html[dir="rtl"] .specific-list,
+html[dir="rtl"] .page-hero,
+html[dir="rtl"] .prose,
+html[dir="rtl"] .info-card,
+html[dir="rtl"] .dialog-body,
+html[dir="rtl"] #site-search {
+  text-align: right;
+}
+
+html[dir="rtl"] .journey,
+html[dir="rtl"] .video-frame {
+  text-align: center;
 }
 
 iframe[src*="blackbox"],

@@ -181,18 +181,30 @@
     return icons[name] || icons.book;
   }
 
+  var isAr =
+    (document.documentElement.lang || "").toLowerCase().indexOf("ar") === 0 ||
+    document.documentElement.getAttribute("dir") === "rtl";
+
+  function loc(item, key) {
+    if (isAr && item[key + "Ar"]) return item[key + "Ar"];
+    return item[key];
+  }
+
   function facultyCard(item) {
     return (
       '<a class="interest-card" href="' +
-      item.url +
+      loc(item, "url") +
       '" rel="noopener noreferrer"><h3>' +
-      item.title +
+      loc(item, "title") +
       "</h3>" +
-      '<span class="interest-card__arrow" aria-hidden="true">→</span></a>'
+      '<span class="interest-card__arrow" aria-hidden="true">' +
+      (isAr ? "←" : "→") +
+      "</span></a>"
     );
   }
 
   var data = window.UOP_DATA;
+  var copy = (data && data.i18n && data.i18n[isAr ? "ar" : "en"]) || {};
   if (data && facultyGrid) {
     facultyGrid.innerHTML = data.faculties
       .filter(function (item) {
@@ -211,16 +223,18 @@
           iconSvg(item.icon) +
           "</div>" +
           "<div><h2>" +
-          item.title +
+          loc(item, "title") +
           "</h2><p>" +
-          item.summary +
+          loc(item, "summary") +
           "</p>" +
           '<p class="faculty-panel__meta">' +
-          item.countLabel +
+          loc(item, "countLabel") +
           "</p>" +
           '<a class="text-link" href="' +
-          item.url +
-          '" rel="noopener noreferrer">Visit faculty website →</a></div></article>'
+          loc(item, "url") +
+          '" rel="noopener noreferrer">' +
+          (copy.visitFaculty || "Visit faculty website →") +
+          "</a></div></article>"
         );
       })
       .join("");
@@ -231,39 +245,30 @@
     var q = query.trim().toLowerCase();
     if (!q) {
       searchResults.innerHTML =
-        "<p class='search-hint'>Search faculties, admissions, campus life, and official services.</p>";
+        "<p class='search-hint'>" +
+        (copy.searchHint || "Search faculties, admissions, campus life, and official services.") +
+        "</p>";
       return;
     }
 
-    var extra = [
-      {
-        title: "Admissions and Registration",
-        url: "admissions.html",
-        countLabel: "Internal page",
-      },
-      {
-        title: "Admission requirements",
-        url: "https://uop.edu.jo/En/AdmissionsAndRegistration/Pages/AdmissionRequirements.aspx",
-        countLabel: "Official page",
-      },
-      {
-        title: "Apply online",
-        url: data.applyUrl,
-        countLabel: "EduGate",
-      },
-      {
-        title: "Campus life",
-        url: "campus-life.html",
-        countLabel: "Internal page",
-      },
-      {
-        title: "About University of Petra",
-        url: "about.html",
-        countLabel: "Internal page",
-      },
-    ];
+    var extra = (copy.extraPages || []).map(function (page) {
+      return {
+        title: page.title,
+        url: page.urlKey ? data[page.urlKey] : page.url,
+        countLabel: page.countLabel,
+      };
+    });
 
-    var pool = data.faculties.concat(extra);
+    var pool = data.faculties
+      .map(function (item) {
+        return {
+          title: loc(item, "title"),
+          summary: loc(item, "summary"),
+          countLabel: loc(item, "countLabel"),
+          url: loc(item, "url"),
+        };
+      })
+      .concat(extra);
     var matches = pool.filter(function (item) {
       return (
         (item.title && item.title.toLowerCase().indexOf(q) !== -1) ||
@@ -273,7 +278,10 @@
     });
 
     if (!matches.length) {
-      searchResults.innerHTML = "<p class='search-hint'>No matching pages. Try a faculty name or “admissions”.</p>";
+      searchResults.innerHTML =
+        "<p class='search-hint'>" +
+        (copy.searchEmpty || "No matching pages. Try a faculty name or “admissions”.") +
+        "</p>";
       return;
     }
 

@@ -2,13 +2,18 @@ window.UOP_DATA = {
   name: "University of Petra",
   nameAr: "جامعة البترا",
   url: "https://www.uop.edu.jo/En/Pages/default.aspx",
+  urlAr: "https://www.uop.edu.jo/Ar/Pages/default.aspx",
   applyUrl:
     "https://edugate.uop.edu.jo/faces/ui/pages/guest/admissionOnline/index.xhtml",
   address: {
     street: "Airport Road",
+    streetAr: "طريق المطار",
     city: "Amman",
+    cityAr: "عمّان",
     country: "Jordan",
+    countryAr: "الأردن",
     poBox: "P.O. Box 961343",
+    poBoxAr: "صندوق بريد 961343",
   },
   contact: {
     phone: "+962 6 579 9555",
@@ -28,103 +33,190 @@ window.UOP_DATA = {
     youtube: "https://www.youtube.com/channel/UCcmWMT3PYpx-qpSswsHRiRg",
     x: "https://twitter.com/petrauniversity",
   },
+  i18n: {
+    en: {
+      visitFaculty: "Visit faculty website →",
+      searchHint: "Search faculties, admissions, campus life, and official services.",
+      searchEmpty: "No matching pages. Try a faculty name or “admissions”.",
+      extraPages: [
+        { title: "Admissions and Registration", url: "admissions.html", countLabel: "Internal page" },
+        {
+          title: "Admission requirements",
+          url: "https://uop.edu.jo/En/AdmissionsAndRegistration/Pages/AdmissionRequirements.aspx",
+          countLabel: "Official page",
+        },
+        { title: "Apply online", urlKey: "applyUrl", countLabel: "EduGate" },
+        { title: "Campus life", url: "campus-life.html", countLabel: "Internal page" },
+        { title: "About University of Petra", url: "about.html", countLabel: "Internal page" },
+      ],
+    },
+    ar: {
+      visitFaculty: "زيارة موقع الكلية ←",
+      searchHint: "ابحث في الكليات، والقبول والتسجيل، والحياة الجامعية، والخدمات الرسمية.",
+      searchEmpty: "لا توجد نتائج مطابقة. جرّب اسم كلية أو «القبول».",
+      extraPages: [
+        { title: "القبول والتسجيل", url: "admissions.html", countLabel: "صفحة داخلية" },
+        {
+          title: "شروط القبول",
+          url: "https://uop.edu.jo/Ar/AdmissionsAndRegistration/Pages/AdmissionRequirements.aspx",
+          countLabel: "صفحة رسمية",
+        },
+        { title: "تقديم طلب التحاق إلكتروني", urlKey: "applyUrl", countLabel: "EduGate" },
+        { title: "الحياة الجامعية", url: "campus-life.html", countLabel: "صفحة داخلية" },
+        { title: "عن جامعة البترا", url: "about.html", countLabel: "صفحة داخلية" },
+      ],
+    },
+  },
   stats: [
-    { value: "7,000+", label: "Students" },
-    { value: "31", label: "Nationalities" },
-    { value: "9", label: "Academic Areas" },
+    { value: "7,000+", label: "Students", labelAr: "طالب وطالبة" },
+    { value: "31", label: "Nationalities", labelAr: "جنسية" },
+    { value: "9", label: "Academic Areas", labelAr: "كليات أكاديمية" },
   ],
   faculties: [
     {
       id: "it",
       title: "Information Technology & Computer Science",
+      titleAr: "تكنولوجيا المعلومات وعلوم الحاسوب",
       short: "Information Technology",
+      shortAr: "تكنولوجيا المعلومات",
       countLabel: "5 bachelor's programs",
+      countLabelAr: "5 برامج بكالوريوس",
       url: "https://fit.uop.edu.jo/En/Pages/default.aspx",
+      urlAr: "https://fit.uop.edu.jo/Ar/Pages/default.aspx",
       icon: "monitor",
       featured: true,
       summary:
         "The Faculty of Information Technology offers bachelor's programs in Computer Science, Software Engineering, Information Security, Data Science and Artificial Intelligence, and Virtual and Augmented Reality. Computer Science at University of Petra is ABET-accredited.",
+      summaryAr:
+        "تطرح كلية تكنولوجيا المعلومات برامج البكالوريوس في علم الحاسوب، وهندسة البرمجيات، وأمن المعلومات، وعلم البيانات والذكاء الاصطناعي، والواقع الافتراضي والمعزز. تخصص علم الحاسوب في جامعة البترا معتمد من ABET.",
     },
     {
       id: "eng",
       title: "Engineering",
+      titleAr: "الهندسة",
       short: "Engineering",
+      shortAr: "الهندسة",
       countLabel: "Civil Engineering",
+      countLabelAr: "الهندسة المدنية",
       url: "https://eng.uop.edu.jo/En/Pages/default.aspx",
+      urlAr: "https://eng.uop.edu.jo/Ar/Pages/default.aspx",
       icon: "gear",
       summary:
         "The Faculty of Engineering opened with a Department of Civil Engineering. Official faculty materials describe a modern building, laboratories, and licensed engineering software, with additional engineering departments under review.",
+      summaryAr:
+        "افتتحت كلية الهندسة بقسم الهندسة المدنية. وتشير المواد الرسمية للكلية إلى مبنى حديث ومختبرات وبرمجيات هندسية مرخّصة، مع دراسة استحداث أقسام هندسية إضافية.",
     },
     {
       id: "dent",
       title: "Dentistry",
+      titleAr: "طب الأسنان",
       short: "Dentistry",
+      shortAr: "طب الأسنان",
       countLabel: "Doctor of Dental Surgery",
+      countLabelAr: "دكتور في جراحة الأسنان",
       url: "https://dentist.uop.edu.jo/En/Pages/default.aspx",
+      urlAr: "https://dentist.uop.edu.jo/Ar/Pages/default.aspx",
       icon: "tooth",
       summary:
         "The Faculty of Dentistry offers the Doctor of Dental Surgery (DDS) program. It is one of the nine faculties listed on the university's official overview.",
+      summaryAr:
+        "تطرح كلية طب الأسنان برنامج دكتور في جراحة الأسنان (DDS). وهي إحدى الكليات التسع الواردة في النبذة الرسمية عن الجامعة.",
     },
     {
       id: "pharma",
       title: "Pharmacy & Medical Sciences",
+      titleAr: "الصيدلة والعلوم الطبية",
       short: "Pharmacy",
+      shortAr: "الصيدلة",
       countLabel: "3 bachelor's · 2 master's",
+      countLabelAr: "3 بكالوريوس · 2 ماجستير",
       url: "https://pharma.uop.edu.jo/En/Pages/Overview.aspx",
+      urlAr: "https://pharma.uop.edu.jo/Ar/Pages/Overview.aspx",
       icon: "flask",
       summary:
         "Undergraduate programs in Pharmacy, Nutrition, and Medical Laboratory Sciences, plus master's degrees in Pharmaceutical Sciences and Nutrition and Dietetics.",
+      summaryAr:
+        "برامج البكالوريوس في الصيدلة، والتغذية، والتحاليل الطبية، إضافة إلى ماجستير العلوم الصيدلانية وماجستير التغذية والحميات.",
     },
     {
       id: "business",
       title: "Business",
+      titleAr: "العلوم الإدارية والمالية",
       short: "Business",
+      shortAr: "العلوم الإدارية والمالية",
       countLabel: "9 bachelor's · 3 master's",
+      countLabelAr: "9 بكالوريوس · 3 ماجستير",
       url: "https://fafs.uop.edu.jo/En/pages/overview.aspx",
+      urlAr: "https://fafs.uop.edu.jo/Ar/pages/overview.aspx",
       icon: "briefcase",
       summary:
         "The Faculty of Administrative and Financial Sciences offers undergraduate degrees including Business Administration, Accounting, Banking and Finance, Marketing, Digital Marketing, E-Business and Commerce, Business Intelligence and Data Analysis, Financial Technology, and Supply Chain Management and Logistics Sciences, plus MBA, Business Intelligence, and Digital Marketing master's programs.",
+      summaryAr:
+        "تطرح كلية العلوم الإدارية والمالية برامج البكالوريوس في إدارة الأعمال، والمحاسبة، والعلوم المالية والمصرفية، والتسويق، والتسويق الرقمي، والأعمال والتجارة الإلكترونية، وذكاء الأعمال وتحليل البيانات، والتكنولوجيا المالية، وإدارة سلاسل التوريد وعلوم اللوجستيات، إضافة إلى برامج ماجستير في إدارة الأعمال، وذكاء الأعمال، والتسويق الرقمي.",
     },
     {
       id: "law",
       title: "Law",
+      titleAr: "الحقوق",
       short: "Law",
+      shortAr: "الحقوق",
       countLabel: "Bachelor of Law",
+      countLabelAr: "بكالوريوس الحقوق",
       url: "https://law.uop.edu.jo/En/Pages/default.aspx",
+      urlAr: "https://law.uop.edu.jo/Ar/Pages/default.aspx",
       icon: "scale",
       summary:
         "University of Petra introduced law as a field of study in 2011. The Faculty of Law prepares students for legal practice and related professions in Jordan.",
+      summaryAr:
+        "استحدثت جامعة البترا تخصص الحقوق عام 2011. وتُعدّ كلية الحقوق الطلبة لممارسة المهنة القانونية والمهن المرتبطة بها في الأردن.",
     },
     {
       id: "arch",
       title: "Architecture & Design",
+      titleAr: "العمارة والتصميم",
       short: "Architecture & Design",
+      shortAr: "العمارة والتصميم",
       countLabel: "5 bachelor's · 2 master's",
+      countLabelAr: "5 بكالوريوس · 2 ماجستير",
       url: "https://arch.uop.edu.jo/En/pages/overview.aspx",
+      urlAr: "https://arch.uop.edu.jo/Ar/Pages/Overview.aspx",
       icon: "building",
       summary:
         "Bachelor's programs in Architecture, Interior Design, Graphic Design, Animation and Multimedia, and Digital Film Design Technology, plus master's degrees in Smart Sustainable Cities and Interior Design.",
+      summaryAr:
+        "برامج البكالوريوس في هندسة العمارة، والتصميم الداخلي، والتصميم الجرافيكي، والتحريك والوسائط المتعددة، وتكنولوجيا تصميم الفيلم الرقمي، إضافة إلى ماجستير المدن المستدامة الذكية وماجستير التصميم الداخلي.",
     },
     {
       id: "media",
       title: "Media & Communication",
+      titleAr: "الإعلام",
       short: "Media & Communication",
+      shortAr: "الإعلام",
       countLabel: "3 bachelor's · 1 master's",
+      countLabelAr: "3 بكالوريوس · 1 ماجستير",
       url: "https://mass.uop.edu.jo/En/Pages/Overview.aspx",
+      urlAr: "https://mass.uop.edu.jo/Ar/Pages/Overview.aspx",
       icon: "megaphone",
       summary:
         "The Faculty of Mass Communication offers bachelor's programs in Radio and Television, Journalism and Digital Media, and Digital Promotional Media, plus a master's degree in Journalism and Digital Media.",
+      summaryAr:
+        "تطرح كلية الإعلام برامج البكالوريوس في الإذاعة والتلفزيون، والصحافة والإعلام الرقمي، والإعلام الترويجي الرقمي، إضافة إلى ماجستير الصحافة والإعلام الرقمي.",
     },
     {
       id: "artsci",
       title: "Arts & Sciences",
+      titleAr: "الآداب والعلوم",
       short: "Arts & Sciences",
+      shortAr: "الآداب والعلوم",
       countLabel: "9 bachelor's · 3 master's",
+      countLabelAr: "9 بكالوريوس · 3 ماجستير",
       url: "https://artsci.uop.edu.jo/En/Pages/Overview.aspx",
+      urlAr: "https://artsci.uop.edu.jo/Ar/Pages/Overview.aspx",
       icon: "book",
-      home: false,
       summary:
         "The Faculty of Arts and Sciences offers undergraduate degrees in Arabic language and literature, English language and literature, English/translation, French language and literature, English and French languages and literatures, primary education, early childhood education, chemistry, and mathematics, plus master's degrees in English/translation, Arabic language and literature, and chemistry.",
+      summaryAr:
+        "تطرح كلية الآداب والعلوم برامج البكالوريوس في اللغة العربية وآدابها، واللغة الإنجليزية وآدابها، واللغة الإنجليزية / الترجمة، واللغة الفرنسية وآدابها، واللغتين الإنجليزية والفرنسية وآدابهما، ومعلم الصف، والطفولة المبكرة، والكيمياء، والرياضيات، إضافة إلى ماجستير اللغة الإنجليزية / الترجمة، واللغة العربية وآدابها، والكيمياء.",
     },
   ],
 };
