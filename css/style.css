@@ -20,6 +20,38 @@
   color-scheme: light;
 }
 
+@font-face {
+  font-family: "Helvetica Neue LT Arabic";
+  src: url("../assets/fonts/alfont_com_هلفيتيكا-عربي-.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Helvetica Neue LT Arabic";
+  src: url("../assets/fonts/alfont_com_هلفيتيكا-عربي-.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Helvetica Neue LT Arabic";
+  src: url("../assets/fonts/alfont_com_هلفيتيكا-عربي-.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Helvetica Neue LT Arabic";
+  src: url("../assets/fonts/alfont_com_هلفيتيكا-عربي-.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
 *,
 *::before,
 *::after {
@@ -1344,9 +1376,9 @@ body.nav-open {
 }
 
 html[dir="rtl"] {
-  --font: "Cairo", "Segoe UI", Tahoma, sans-serif;
-  --serif: "Amiri", "Noto Naskh Arabic", Georgia, serif;
-  --script: "Aref Ruqaa", "Amiri", serif;
+  --font: "Helvetica Neue LT Arabic";
+  --serif: "Helvetica Neue LT Arabic";
+  --script: "Helvetica Neue LT Arabic";
 }
 
 html[dir="rtl"] body {

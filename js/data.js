@@ -39,15 +39,15 @@ window.UOP_DATA = {
       searchHint: "Search faculties, admissions, campus life, and official services.",
       searchEmpty: "No matching pages. Try a faculty name or “admissions”.",
       extraPages: [
-        { title: "Admissions and Registration", url: "admissions.html", countLabel: "Internal page" },
+        { title: "Admissions and Registration", url: "https://www.uop.edu.jo/en/pages/default.aspx", countLabel: "Official page" },
         {
           title: "Admission requirements",
           url: "https://uop.edu.jo/En/AdmissionsAndRegistration/Pages/AdmissionRequirements.aspx",
           countLabel: "Official page",
         },
         { title: "Apply online", urlKey: "applyUrl", countLabel: "EduGate" },
-        { title: "Campus life", url: "campus-life.html", countLabel: "Internal page" },
-        { title: "About University of Petra", url: "about.html", countLabel: "Internal page" },
+        { title: "Campus life", url: "https://www.uop.edu.jo/en/pages/default.aspx", countLabel: "Official page" },
+        { title: "About University of Petra", url: "https://www.uop.edu.jo/en/pages/default.aspx", countLabel: "Official page" },
       ],
     },
     ar: {
@@ -55,15 +55,15 @@ window.UOP_DATA = {
       searchHint: "ابحث في الكليات، والقبول والتسجيل، والحياة الجامعية، والخدمات الرسمية.",
       searchEmpty: "لا توجد نتائج مطابقة. جرّب اسم كلية أو «القبول».",
       extraPages: [
-        { title: "القبول والتسجيل", url: "admissions.html", countLabel: "صفحة داخلية" },
+        { title: "القبول والتسجيل", url: "https://www.uop.edu.jo/ar/pages/default.aspx", countLabel: "صفحة رسمية" },
         {
           title: "شروط القبول",
           url: "https://uop.edu.jo/Ar/AdmissionsAndRegistration/Pages/AdmissionRequirements.aspx",
           countLabel: "صفحة رسمية",
         },
         { title: "تقديم طلب التحاق إلكتروني", urlKey: "applyUrl", countLabel: "EduGate" },
-        { title: "الحياة الجامعية", url: "campus-life.html", countLabel: "صفحة داخلية" },
-        { title: "عن جامعة البترا", url: "about.html", countLabel: "صفحة داخلية" },
+        { title: "الحياة الجامعية", url: "https://www.uop.edu.jo/ar/pages/default.aspx", countLabel: "صفحة رسمية" },
+        { title: "عن جامعة البترا", url: "https://www.uop.edu.jo/ar/pages/default.aspx", countLabel: "صفحة رسمية" },
       ],
     },
   },
