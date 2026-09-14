@@ -345,6 +345,17 @@ input {
   color: #fff;
 }
 
+.header-actions .btn--primary,
+.nav-apply .btn--primary,
+.cta__actions .btn--ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  white-space: nowrap;
+  line-height: 1.15;
+}
+
 .eyebrow {
   color: var(--maroon);
   font-size: 0.78rem;
@@ -840,8 +851,9 @@ input {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.3fr 0.8fr 1fr 1.1fr;
+  grid-template-columns: 1.3fr 1fr 1.1fr;
   gap: 2rem;
+  align-items: start;
 }
 
 .site-footer a {
@@ -983,6 +995,11 @@ input {
   color: #fff;
   background: var(--maroon);
   border-bottom: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0.7rem 1.15rem;
 }
 
 .prose h2 {
@@ -1431,8 +1448,9 @@ html[dir="rtl"] #site-search {
   text-align: right;
 }
 
-html[dir="rtl"] .journey,
-html[dir="rtl"] .video-frame {
+html[dir="rtl"] .header-actions .btn--primary,
+html[dir="rtl"] .nav-apply .btn--primary,
+html[dir="rtl"] .cta__actions .btn--ghost {
   text-align: center;
 }
 
