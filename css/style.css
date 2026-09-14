@@ -22,7 +22,7 @@
 
 @font-face {
   font-family: "Helvetica Neue LT Arabic";
-  src: url("../assets/fonts/alfont_com_هلفيتيكا-عربي-.ttf") format("truetype");
+  src: url("../assets/fonts/HelveticaNeueLTArabic.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -30,7 +30,7 @@
 
 @font-face {
   font-family: "Helvetica Neue LT Arabic";
-  src: url("../assets/fonts/alfont_com_هلفيتيكا-عربي-.ttf") format("truetype");
+  src: url("../assets/fonts/HelveticaNeueLTArabic.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -38,7 +38,7 @@
 
 @font-face {
   font-family: "Helvetica Neue LT Arabic";
-  src: url("../assets/fonts/alfont_com_هلفيتيكا-عربي-.ttf") format("truetype");
+  src: url("../assets/fonts/HelveticaNeueLTArabic.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -46,7 +46,7 @@
 
 @font-face {
   font-family: "Helvetica Neue LT Arabic";
-  src: url("../assets/fonts/alfont_com_هلفيتيكا-عربي-.ttf") format("truetype");
+  src: url("../assets/fonts/HelveticaNeueLTArabic.ttf") format("truetype");
   font-weight: 800;
   font-style: normal;
   font-display: swap;
@@ -153,9 +153,27 @@ input {
 .brand {
   display: flex;
   align-items: center;
+  gap: 0.7rem;
   text-decoration: none;
-  color: var(--ink);
+  color: var(--maroon);
   flex-shrink: 0;
+}
+
+.brand__mark {
+  height: 48px;
+  width: auto;
+  flex-shrink: 0;
+  display: block;
+}
+
+.brand__name {
+  font-family: var(--font);
+  font-weight: 800;
+  font-size: clamp(0.72rem, 1.7vw, 0.9rem);
+  letter-spacing: 0.06em;
+  line-height: 1.15;
+  text-transform: uppercase;
+  color: var(--maroon);
 }
 
 .brand__logo {
@@ -163,6 +181,11 @@ input {
   width: auto;
   max-width: min(260px, 46vw);
   display: block;
+}
+
+.site-footer .brand__mark {
+  height: 56px;
+  width: auto;
 }
 
 .site-footer .brand__logo {
@@ -1393,9 +1416,9 @@ body.nav-open {
 }
 
 html[dir="rtl"] {
-  --font: "Helvetica Neue LT Arabic";
-  --serif: "Helvetica Neue LT Arabic";
-  --script: "Helvetica Neue LT Arabic";
+  --font: "Helvetica Neue LT Arabic", Tahoma, sans-serif;
+  --serif: "Helvetica Neue LT Arabic", Tahoma, sans-serif;
+  --script: "Helvetica Neue LT Arabic", Tahoma, sans-serif;
 }
 
 html[dir="rtl"] body {
@@ -1433,8 +1456,14 @@ html[dir="rtl"] .hero__script {
   transform: rotate(8deg);
 }
 
-html[dir="rtl"] .footer-motto p {
-  max-width: 12ch;
+html[dir="rtl"] .brand__name {
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: 900;
+  font-synthesis: weight;
+  -webkit-text-stroke: 0.65px currentColor;
+  paint-order: stroke fill;
+  font-size: clamp(0.82rem, 2vw, 1.02rem);
 }
 
 html[dir="rtl"] .primary-nav,
