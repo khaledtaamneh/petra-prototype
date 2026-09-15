@@ -39,7 +39,7 @@ window.UOP_DATA = {
       searchHint: "Search faculties, admissions, campus life, and official services.",
       searchEmpty: "No matching pages. Try a faculty name or “admissions”.",
       extraPages: [
-        { title: "Admissions and Registration", url: "https://www.uop.edu.jo/en/pages/default.aspx", countLabel: "Official page" },
+        { title: "Admissions and Registration", url: "https://edugate.uop.edu.jo/faces/ui/pages/guest/admissionOnline/index.xhtml", countLabel: "EduGate" },
         {
           title: "Admission requirements",
           url: "https://uop.edu.jo/En/AdmissionsAndRegistration/Pages/AdmissionRequirements.aspx",
@@ -130,8 +130,8 @@ window.UOP_DATA = {
       shortAr: "الصيدلة",
       countLabel: "3 bachelor's · 2 master's",
       countLabelAr: "3 بكالوريوس · 2 ماجستير",
-      url: "https://pharma.uop.edu.jo/En/Pages/Overview.aspx",
-      urlAr: "https://pharma.uop.edu.jo/Ar/Pages/Overview.aspx",
+      url: "https://pharma.uop.edu.jo/En/Pages/default.aspx",
+      urlAr: "https://pharma.uop.edu.jo/Ar/Pages/default.aspx",
       icon: "flask",
       summary:
         "Undergraduate programs in Pharmacy, Nutrition, and Medical Laboratory Sciences, plus master's degrees in Pharmaceutical Sciences and Nutrition and Dietetics.",
@@ -146,8 +146,8 @@ window.UOP_DATA = {
       shortAr: "العلوم الإدارية والمالية",
       countLabel: "9 bachelor's · 3 master's",
       countLabelAr: "9 بكالوريوس · 3 ماجستير",
-      url: "https://fafs.uop.edu.jo/En/pages/overview.aspx",
-      urlAr: "https://fafs.uop.edu.jo/Ar/pages/overview.aspx",
+      url: "https://fafs.uop.edu.jo/En/Pages/default.aspx",
+      urlAr: "https://fafs.uop.edu.jo/Ar/Pages/default.aspx",
       icon: "briefcase",
       summary:
         "The Faculty of Administrative and Financial Sciences offers undergraduate degrees including Business Administration, Accounting, Banking and Finance, Marketing, Digital Marketing, E-Business and Commerce, Business Intelligence and Data Analysis, Financial Technology, and Supply Chain Management and Logistics Sciences, plus MBA, Business Intelligence, and Digital Marketing master's programs.",
@@ -178,8 +178,8 @@ window.UOP_DATA = {
       shortAr: "العمارة والتصميم",
       countLabel: "5 bachelor's · 2 master's",
       countLabelAr: "5 بكالوريوس · 2 ماجستير",
-      url: "https://arch.uop.edu.jo/En/pages/overview.aspx",
-      urlAr: "https://arch.uop.edu.jo/Ar/Pages/Overview.aspx",
+      url: "https://arch.uop.edu.jo/En/Pages/default.aspx",
+      urlAr: "https://arch.uop.edu.jo/Ar/Pages/default.aspx",
       icon: "building",
       summary:
         "Bachelor's programs in Architecture, Interior Design, Graphic Design, Animation and Multimedia, and Digital Film Design Technology, plus master's degrees in Smart Sustainable Cities and Interior Design.",
@@ -194,8 +194,8 @@ window.UOP_DATA = {
       shortAr: "الإعلام",
       countLabel: "3 bachelor's · 1 master's",
       countLabelAr: "3 بكالوريوس · 1 ماجستير",
-      url: "https://mass.uop.edu.jo/En/Pages/Overview.aspx",
-      urlAr: "https://mass.uop.edu.jo/Ar/Pages/Overview.aspx",
+      url: "https://mass.uop.edu.jo/En/Pages/default.aspx",
+      urlAr: "https://mass.uop.edu.jo/Ar/Pages/default.aspx",
       icon: "megaphone",
       summary:
         "The Faculty of Mass Communication offers bachelor's programs in Radio and Television, Journalism and Digital Media, and Digital Promotional Media, plus a master's degree in Journalism and Digital Media.",
@@ -210,8 +210,8 @@ window.UOP_DATA = {
       shortAr: "الآداب والعلوم",
       countLabel: "9 bachelor's · 3 master's",
       countLabelAr: "9 بكالوريوس · 3 ماجستير",
-      url: "https://artsci.uop.edu.jo/En/Pages/Overview.aspx",
-      urlAr: "https://artsci.uop.edu.jo/Ar/Pages/Overview.aspx",
+      url: "https://artsci.uop.edu.jo/En/Pages/default.aspx",
+      urlAr: "https://artsci.uop.edu.jo/Ar/Pages/default.aspx",
       icon: "book",
       summary:
         "The Faculty of Arts and Sciences offers undergraduate degrees in Arabic language and literature, English language and literature, English/translation, French language and literature, English and French languages and literatures, primary education, early childhood education, chemistry, and mathematics, plus master's degrees in English/translation, Arabic language and literature, and chemistry.",
